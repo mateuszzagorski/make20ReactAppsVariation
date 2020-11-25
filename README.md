@@ -1,6 +1,6 @@
 # make20ReactAppsVariation
 
-These 20 Apps were created as part of the course on https://makereactapps.com/ by Chris on Code. Some of the apps are enhanced with a tweaks and addons i've created myself as is the overall the idea to gather them all in one big project was also mine.
+These 20 Apps were created as part of the course on https://makereactapps.com/ by Chris on Code. Some of the apps are enhanced with a tweaks and addons i've created myself as is the overall the idea to gather them all in one big project.
 
 # Getting Started with Create React App
 
