@@ -10,4 +10,14 @@ export const AppRoute = {
     authentication: "/authentication",
     web_speech_and_timers: "/web_speech_and_timers",
     calendar_picker: "/calendar_picker",
+
+    animated_chat_box: "/animated_chat_box",
+    multi_step_form: "/multi_step_form",
+    memory_matching_game: "/memory_matching_game",
+    drag_and_drop_math_card: "/drag_and_drop_math_card",
+    browser: "/browser",
+    real_time_search: "/real_time_search",
+    chart_the_weather: "/chart_the_weather",
+    shopping_cart: "/shopping_cart",
+    typing_test: "/typing_test",
 };

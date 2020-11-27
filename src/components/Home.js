@@ -38,6 +38,63 @@ export default function Home() {
             <p>
                 <Link to={{ pathname: AppRoute.trivia_game }}>Trivia Game</Link>
             </p>
+            {/* Issues with Authentication will have to be resolve later on */}
+            {/* <p>
+                <Link to={{ pathname: AppRoute.authentication }}>
+                    Authentication
+                </Link>
+            </p> */}
+            <p>
+                <Link to={{ pathname: AppRoute.web_speech_and_timers }}>
+                    Web speech and timers
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.calendar_picker }}>
+                    Calendar Picker
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.animated_chat_box }}>
+                    Animated chat box
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.multi_step_form }}>
+                    Multi Step Form
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.memory_matching_game }}>
+                    Memory Matching Game
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.drag_and_drop_math_card }}>
+                    Drag and Drop Math Card
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.browser }}>Browser</Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.real_time_search }}>
+                    Real Time Search
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.chart_the_weather }}>
+                    Chart The Weather
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.shopping_cart }}>
+                    Shopping Cart
+                </Link>
+            </p>
+            <p>
+                <Link to={{ pathname: AppRoute.typing_test }}>Typing Test</Link>
+            </p>
         </div>
     );
 }
