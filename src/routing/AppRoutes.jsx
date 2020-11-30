@@ -17,10 +17,10 @@ import MultiStepForm from "../app/multi_step_form/App";
 import MemoryMatchingGame from "../app/memory_matching_game/App";
 import DragAndDropMathCard from "../app/drag_and_drop_math_card/App";
 import Browser from "../app/browser/App";
-// import RealTimeSearch from "../app/real_time_search/App";
-// import ChartTheWeather from "../app/chart_the_weather/App";
-// import ShoppingCart from "../app/shopping_cart/App";
-// import TypingTest from "../app/typing_test/App";
+import RealTimeSearch from "../app/real_time_search/App";
+import ChartTheWeather from "../app/chart_the_weather/App";
+import ShoppingCart from "../app/shopping_cart/App";
+import TypingTest from "../app/typing_test/App";
 
 import { AppRoute } from "./AppRoute.enum";
 import Home from "../components/Home";
@@ -64,10 +64,16 @@ export const AppRoutes = () => {
                 component={DragAndDropMathCard}
             />
             <Route path={AppRoute.browser} component={Browser} />
-            {/* <Route path={AppRoute.real_time_search} component={RealTimeSearch} /> */}
-            {/* <Route path={AppRoute.chart_the_weather} component={ChartTheWeather} /> */}
-            {/* <Route path={AppRoute.shopping_cart} component={ShoppingCart} /> */}
-            {/* <Route path={AppRoute.typing_test} component={TypingTest} /> */}
+            <Route
+                path={AppRoute.real_time_search}
+                component={RealTimeSearch}
+            />
+            <Route
+                path={AppRoute.chart_the_weather}
+                component={ChartTheWeather}
+            />
+            <Route path={AppRoute.shopping_cart} component={ShoppingCart} />
+            <Route path={AppRoute.typing_test} component={TypingTest} />
         </Switch>
     );
 };
