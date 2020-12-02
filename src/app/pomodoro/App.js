@@ -1,8 +1,5 @@
 import React, { useState, useRef } from "react";
 import "./Pomodoro.scss";
-import { AppRoute } from "../../routing/AppRoute.enum";
-import { Link } from "react-router-dom";
-import Navigation from "../../components/Navigation";
 
 function padTime(time) {
     return time.toString().padStart(2, "0");
@@ -50,7 +47,6 @@ export default function Pomodoro() {
 
     return (
         <div className="pomodoro-app">
-            <Navigation />
             <h2>{title}</h2>
 
             <div className="timer">

@@ -1,13 +1,21 @@
 import React from "react";
-import { AppRoute } from "../routing/AppRoute.enum";
+import { AppRoute } from "../../routing/AppRoute.enum";
 import { Link } from "react-router-dom";
-import Navigation from "./Navigation";
+import Navigation from "../navigation/Navigation";
+import Card from "../card/Card";
+import CardList from "../cardList/CardList";
 
 export default function Home() {
     return (
-        <div>
-            <span>
-                <Navigation />
+        <>
+            {/* <Navigation /> */}
+            <CardList />
+        </>
+    );
+}
+{
+    /* <span> 
+                 <Card name="Pomodoro" linkTo="pomodoro" />
             </span>
             <p>
                 <Link to={{ pathname: AppRoute.pomodoro }}>Pomodoro</Link>
@@ -38,12 +46,12 @@ export default function Home() {
             <p>
                 <Link to={{ pathname: AppRoute.trivia_game }}>Trivia Game</Link>
             </p>
-            {/* Issues with Authentication will have to be resolve later on */}
-            {/* <p>
+            //  Issues with Authentication will have to be resolve later on 
+             <p>
                 <Link to={{ pathname: AppRoute.authentication }}>
                     Authentication
                 </Link>
-            </p> */}
+            </p> 
             <p>
                 <Link to={{ pathname: AppRoute.web_speech_and_timers }}>
                     Web speech and timers
@@ -94,7 +102,5 @@ export default function Home() {
             </p>
             <p>
                 <Link to={{ pathname: AppRoute.typing_test }}>Typing Test</Link>
-            </p>
-        </div>
-    );
+            </p> */
 }
