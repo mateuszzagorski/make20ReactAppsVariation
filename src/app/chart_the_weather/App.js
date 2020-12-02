@@ -10,7 +10,6 @@ import WeatherChart from "./components/WeatherChart";
 // google maps api
 // api key: AIzaSyDp4os33WF6-4d-xFVyL0HsUUHN7dOml_w
 
-// api key: AIzaSyBIhVwxTief_N49XBPFWRl6CuI3WP4wIrg
 
 export default function ChartTheWeather() {
     const [latLng, setLatLng] = useState(null);
