@@ -1,15 +1,16 @@
 import React from "react";
-import { AppRoute } from "../../routing/AppRoute.enum";
-import { Link } from "react-router-dom";
-import Navigation from "../navigation/Navigation";
-import Card from "../card/Card";
 import CardList from "../cardList/CardList";
 
 export default function Home() {
     return (
         <>
-            {/* <Navigation /> */}
+            {/* <div id="outer-container">
+                <Navigation />
+
+                <main id="page-wrap"> */}
             <CardList />
+            {/* </main>
+            </div> */}
         </>
     );
 }

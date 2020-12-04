@@ -24,6 +24,8 @@ import ChartTheWeather from "../app/chart_the_weather/App";
 import ShoppingCart from "../app/shopping_cart/App";
 import TypingTest from "../app/typing_test/App";
 
+import Navigation from "../components/navigation/Navigation";
+
 import image1 from "../images/1.PNG";
 import image2 from "../images/2.PNG";
 import image3 from "../images/3.PNG";
@@ -48,7 +50,7 @@ export const routes = [
     {
         path: AppRoute.home,
         component: Home,
-        name: "home",
+        name: "Home",
     },
     {
         path: AppRoute.pomodoro,
@@ -170,16 +172,22 @@ export const routes = [
 export const AppRoutes = () => {
     return (
         <div className="app">
-            <Switch>
-                {routes.map((route) => (
-                    <Route
-                        exact
-                        path={route.path}
-                        component={route.component}
-                        key={route.path}
-                    />
-                ))}
-            </Switch>
+            <div id="outer-container">
+                <Navigation />
+
+                <main id="page-wrap">
+                    <Switch>
+                        {routes.map((route) => (
+                            <Route
+                                exact
+                                path={route.path}
+                                component={route.component}
+                                key={route.path}
+                            />
+                        ))}
+                    </Switch>
+                </main>
+            </div>
         </div>
     );
 };
