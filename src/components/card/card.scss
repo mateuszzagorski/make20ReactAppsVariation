@@ -42,6 +42,10 @@
             display: inline-block;
             background: #ed4e6e;
             color: #fff;
+            &.disabled {
+                pointer-events: none;
+                cursor: default;
+            }
         }
     }
 }
@@ -110,6 +114,10 @@
                     -moz-transform: translate(15px, 15px);
                     -ms-transform: translate(15px, 15px);
                     transform: translate(-15px, 15px);
+                }
+                figcaption a.disabled {
+                    transform: none;
+                    opacity: 0;
                 }
             }
         }

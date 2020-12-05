@@ -55,7 +55,7 @@ function reducer(state, action) {
 export default function Browser() {
     // Reducer is replacing useState
     const [state, dispatch] = useReducer(reducer, {
-        browsers: ["https://learn.chrisoncode.io", "https://codepen.io"],
+        browsers: ["https://learn.chrisoncode.io", "https://css-tricks.com"],
         activeBrowser: 0,
     });
 
@@ -99,24 +99,26 @@ export default function Browser() {
     const url = browsers[activeBrowser];
 
     return (
-        <div className="browser-app">
-            <div className="browser">
-                <Tabs
-                    browsers={browsers}
-                    active={activeBrowser}
-                    choose={chooseBrowser}
-                    add={addBrowser}
-                    close={closeBrowser}
-                />
+        <div className="browser-app-container">
+            <div className="browser-application">
+                <div className="browser">
+                    <Tabs
+                        browsers={browsers}
+                        active={activeBrowser}
+                        choose={chooseBrowser}
+                        add={addBrowser}
+                        close={closeBrowser}
+                    />
 
-                <AddressBar update={updateBrowser} url={url} />
+                    <AddressBar update={updateBrowser} url={url} />
 
-                <div className="viewport">
-                    {url ? (
-                        <iframe src={url} title="Stuff" />
-                    ) : (
-                        <>New Tab Page </>
-                    )}
+                    <div className="viewport">
+                        {url ? (
+                            <iframe src={url} title="Stuff" />
+                        ) : (
+                            <>New Tab Page </>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

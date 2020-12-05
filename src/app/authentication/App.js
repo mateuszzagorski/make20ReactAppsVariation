@@ -27,19 +27,21 @@ export default function Authentication() {
 
     return (
         <Router>
-            <div className="authentication-app">
-                {/* site header */}
-                <SiteHeader />
+            <div className="authentication-app-container">
+                <div className="authentication-application">
+                    {/* site header */}
+                    <SiteHeader />
 
-                {/* routes */}
-                <Switch>
-                    <PrivateRoute path="/dashboard">
-                        <Dashboard />
-                    </PrivateRoute>
-                    <Route path="/" exact={true}>
-                        <Home />
-                    </Route>
-                </Switch>
+                    {/* routes */}
+                    <Switch>
+                        <PrivateRoute path="/dashboard">
+                            <Dashboard />
+                        </PrivateRoute>
+                        <Route path="/" exact={true}>
+                            <Home />
+                        </Route>
+                    </Switch>
+                </div>
             </div>
         </Router>
     );

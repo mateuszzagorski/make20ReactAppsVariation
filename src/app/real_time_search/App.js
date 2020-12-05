@@ -26,19 +26,21 @@ const searchClient = algoliasearch(
 export default function RealTimeSearch() {
     return (
         <InstantSearch searchClient={searchClient} indexName="products">
-            <div className="real_time_search-app">
-                <div className="search-container">
-                    <Stats />
-                    <SearchBox />
-                    <Hits hitComponent={Product} />
-                    <Pagination
-                        // Optional parameters
-                        showFirst={true}
-                        showPrevious={true}
-                        showNext={true}
-                        showLast={true}
-                        padding={5}
-                    />
+            <div className="real_time_search-app-container">
+                <div className="real_time_search-application">
+                    <div className="search-container">
+                        <Stats />
+                        <SearchBox />
+                        <Hits hitComponent={Product} />
+                        <Pagination
+                            // Optional parameters
+                            showFirst={true}
+                            showPrevious={true}
+                            showNext={true}
+                            showLast={true}
+                            padding={5}
+                        />
+                    </div>
                 </div>
             </div>
         </InstantSearch>

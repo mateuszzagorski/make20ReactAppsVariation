@@ -10,13 +10,12 @@ import WeatherChart from "./components/WeatherChart";
 // google maps api
 // api key: AIzaSyDp4os33WF6-4d-xFVyL0HsUUHN7dOml_w
 
-
 export default function ChartTheWeather() {
     const [latLng, setLatLng] = useState(null);
 
     return (
         <div className="chart_the_weather-app-container">
-            <div className="chart_the_weather-app">
+            <div className="chart_the_weather-application">
                 {/* form goes here */}
                 <GeoForm setLatLng={setLatLng} />
 

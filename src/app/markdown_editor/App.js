@@ -35,11 +35,13 @@ table:
     }
 
     return (
-        <div className="markdown_editor-app">
-            <textarea onChange={handleTextAreaChange} value={markdown} />
+        <div className="markdown_editor-app-container">
+            <div className="markdown_editor-application">
+                <textarea onChange={handleTextAreaChange} value={markdown} />
 
-            {/* <div className="preview" dangerouslySetInnerHTML={{ __html:marked(markdown) }}></div> */}
-            <ReactMarkdown className="preview" source={markdown} />
+                {/* <div className="preview" dangerouslySetInnerHTML={{ __html:marked(markdown) }}></div> */}
+                <ReactMarkdown className="preview" source={markdown} />
+            </div>
         </div>
     );
 }

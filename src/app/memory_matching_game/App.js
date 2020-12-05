@@ -82,35 +82,37 @@ export default function MemoryMatchingGame() {
         // if same card was clicked
         if (opened.includes(index)) return;
 
-        setMoves((moves) => moves + 1);
+        setMoves((moves) => moves + 0.5);
         setOpened((opened) => [...opened, index]);
     }
 
     return (
-        <div className="memory_matching_game-app">
-            <p>
-                {moves} <strong>moves</strong>
-            </p>
+        <div className="memory_matching_game-app-container">
+            <div className="memory_matching_game-application">
+                <p>
+                    {Math.floor(moves)} <strong>moves</strong>
+                </p>
 
-            <div className="cards">
-                {doublePokemon &&
-                    doublePokemon.map((pokemon, index) => {
-                        let isFlipped = false;
+                <div className="cards">
+                    {doublePokemon &&
+                        doublePokemon.map((pokemon, index) => {
+                            let isFlipped = false;
 
-                        // do some logic to check if flipped
-                        if (opened.includes(index)) isFlipped = true;
-                        if (matched.includes(pokemon.id)) isFlipped = true;
+                            // do some logic to check if flipped
+                            if (opened.includes(index)) isFlipped = true;
+                            if (matched.includes(pokemon.id)) isFlipped = true;
 
-                        return (
-                            <PokemonCard
-                                key={index}
-                                index={index}
-                                pokemon={pokemon}
-                                isFlipped={isFlipped}
-                                flipCard={flipCard}
-                            />
-                        );
-                    })}
+                            return (
+                                <PokemonCard
+                                    key={index}
+                                    index={index}
+                                    pokemon={pokemon}
+                                    isFlipped={isFlipped}
+                                    flipCard={flipCard}
+                                />
+                            );
+                        })}
+                </div>
             </div>
         </div>
     );

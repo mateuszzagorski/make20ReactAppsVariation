@@ -7,7 +7,7 @@ export default function CardList() {
         <>
             <ul className={`grid cs-style-1`}>
                 {routes.map((route, index) =>
-                    route.disabled || route.name === "Home" ? (
+                    route.name === "Home" ? (
                         console.log(
                             route.name + " app is not avaialable in this view"
                         )

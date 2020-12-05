@@ -33,7 +33,7 @@ import image4 from "../images/4.PNG";
 import image5 from "../images/5.PNG";
 import image6 from "../images/6.PNG";
 import image7 from "../images/7.PNG";
-// import image8 from "../images/8.PNG";
+import image8 from "../images/8.PNG";
 import image9 from "../images/9.PNG";
 import image10 from "../images/10.PNG";
 import image11 from "../images/11.PNG";
@@ -99,7 +99,7 @@ export const routes = [
         component: Authentication,
         name: "Authentication",
         disabled: "disabled",
-        // image: image8,
+        image: image8,
     },
     {
         path: AppRoute.web_speech_and_timers,
@@ -175,7 +175,7 @@ export const AppRoutes = () => {
             <div id="outer-container">
                 <Navigation />
 
-                <main id="page-wrap">
+                <main id="page-wrap" className="page-wrap">
                     <Switch>
                         {routes.map((route) => (
                             <Route

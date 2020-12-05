@@ -21,21 +21,23 @@ export default function AnimatedChatBox() {
     }, 2000);
 
     return (
-        <div className="animated_chat_box-app">
-            <div className="walkthrough">
-                {messages.map((message, index) => {
-                    const even = index % 2 === 0;
+        <div className="animated_chat_box-app-container">
+            <div className="animated_chat_box-application">
+                <div className="walkthrough">
+                    {messages.map((message, index) => {
+                        const even = index % 2 === 0;
 
-                    // logic goes here
-                    // are we supposed to show a typing indicator
-                    if (messageToShow + 1 === index) {
-                        return <Typing key={index} even={even} />;
-                    }
-                    // are we supposed to show this message?
-                    if (index > messageToShow) return <div key={index} />;
+                        // logic goes here
+                        // are we supposed to show a typing indicator
+                        if (messageToShow + 1 === index) {
+                            return <Typing key={index} even={even} />;
+                        }
+                        // are we supposed to show this message?
+                        if (index > messageToShow) return <div key={index} />;
 
-                    return <Message key={index} message={message} />;
-                })}
+                        return <Message key={index} message={message} />;
+                    })}
+                </div>
             </div>
         </div>
     );

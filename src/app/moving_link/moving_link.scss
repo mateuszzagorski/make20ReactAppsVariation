@@ -1,4 +1,7 @@
-.moving_link-app {
+.moving_link-app-container {
+    background: #415aff;
+}
+.moving_link-application {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -21,11 +24,12 @@
             width: 60px;
             height: 40px;
             background: rgba(43, 159, 75, 0.811);
-            color: rgb(167, 220, 182);
+            color: #eaeaea; // rgb(167, 220, 182);
             border: none;
             border-radius: 8px;
             outline: none;
             transition: 0.3s ease all;
+            border: 2px solid #eaeaea;
             &:hover {
                 background: rgba(51, 177, 87, 0.811);
                 color: #fff;

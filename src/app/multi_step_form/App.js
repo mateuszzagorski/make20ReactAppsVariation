@@ -6,8 +6,10 @@ import "./multi_step_form.scss";
 export default function MultiStepForm() {
     return (
         <Router>
-            <div className="multi_step_form-app">
-                <SignupForm />
+            <div className="multi_step_form-app-container">
+                <div className="multi_step_form-application">
+                    <SignupForm />
+                </div>
             </div>
         </Router>
     );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import "./calendar_picker.scss";
 
 const calendarDates = Array(31)
     .fill(0)
@@ -42,45 +41,51 @@ export default function CalendarPicker() {
 
     return (
         <StyledAppContainer>
-            <StyledDateChooser>
-                <StyledDateChooserButton
-                    onClick={() => setChoosingType("start")}
-                    isChoosing={choosingType === "start"}
-                >
-                    Start Date <span>{startDate}</span>
-                </StyledDateChooserButton>
-                <StyledDateChooserButton
-                    onClick={() => setChoosingType("end")}
-                    isChoosing={choosingType === "end"}
-                >
-                    End Date <span>{endDate}</span>
-                </StyledDateChooserButton>
-            </StyledDateChooser>
+            <StyledCalendarContainer>
+                <StyledDateChooser>
+                    <StyledDateChooserButton
+                        onClick={() => setChoosingType("start")}
+                        isChoosing={choosingType === "start"}
+                    >
+                        Start Date <span>{startDate}</span>
+                    </StyledDateChooserButton>
+                    <StyledDateChooserButton
+                        onClick={() => setChoosingType("end")}
+                        isChoosing={choosingType === "end"}
+                    >
+                        End Date <span>{endDate}</span>
+                    </StyledDateChooserButton>
+                </StyledDateChooser>
 
-            <StyledCalendar>
-                {calendarDates.map((day, index) => {
-                    const dayNumber = day + 1;
+                <StyledCalendar>
+                    {calendarDates.map((day, index) => {
+                        const dayNumber = day + 1;
 
-                    let isInBetween = checkInBetween(dayNumber);
-                    let isSelected =
-                        dayNumber === startDate || dayNumber === endDate;
+                        let isInBetween = checkInBetween(dayNumber);
+                        let isSelected =
+                            dayNumber === startDate || dayNumber === endDate;
 
-                    return (
-                        <StyledCalendarDay
-                            key={index}
-                            isInBetween={isInBetween}
-                            isSelected={isSelected}
-                            onClick={() => updateDate(dayNumber)}
-                            onMouseOver={() => setHoverDate(dayNumber)}
-                        >
-                            {dayNumber}
-                        </StyledCalendarDay>
-                    );
-                })}
-            </StyledCalendar>
+                        return (
+                            <StyledCalendarDay
+                                key={index}
+                                isInBetween={isInBetween}
+                                isSelected={isSelected}
+                                onClick={() => updateDate(dayNumber)}
+                                onMouseOver={() => setHoverDate(dayNumber)}
+                            >
+                                {dayNumber}
+                            </StyledCalendarDay>
+                        );
+                    })}
+                </StyledCalendar>
+            </StyledCalendarContainer>
         </StyledAppContainer>
     );
 }
+const StyledCalendarContainer = styled.div`
+    margin: 0 auto;
+    max-width: 1200px;
+`;
 
 const StyledAppContainer = styled.div`
     @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
@@ -99,9 +104,10 @@ const StyledAppContainer = styled.div`
 
 const StyledDateChooser = styled.div`
     display: flex;
-    margin-bottom: 20px;
     max-width: 300px;
     width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
 `;
 
 const StyledDateChooserButton = styled.button`
@@ -133,6 +139,7 @@ const StyledCalendar = styled.div`
     background: #0b204c;
     color: #fff;
     padding: 20px;
+    margin: 0 auto;
 `;
 
 const StyledCalendarDay = styled.button`

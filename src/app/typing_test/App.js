@@ -56,7 +56,7 @@ export default function TypingTest() {
     }
 
     return (
-        <div className="typing_test-app">
+        <div className="typing_test-application">
             {/* sidebar */}
             <div className="sidebar">
                 <div className="timer">{(timeLeft / 1000).toFixed(2)}</div>

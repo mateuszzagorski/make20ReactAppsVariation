@@ -46,19 +46,21 @@ export default function Pomodoro() {
     const seconds = padTime(timeLeft - minutes * 60);
 
     return (
-        <div className="pomodoro-app">
-            <h2>{title}</h2>
+        <div className="pomodoro-app-container">
+            <div className="pomodoro-application">
+                <h2>{title}</h2>
 
-            <div className="timer">
-                <span>{minutes}</span>
-                <span>:</span>
-                <span>{seconds}</span>
-            </div>
+                <div className="timer">
+                    <span>{minutes}</span>
+                    <span>:</span>
+                    <span>{seconds}</span>
+                </div>
 
-            <div className="buttons">
-                {!isRunning && <button onClick={startTimer}>Start</button>}
-                {isRunning && <button onClick={stopTimer}>Stop</button>}
-                <button onClick={resetTimer}>Reset</button>
+                <div className="buttons">
+                    {!isRunning && <button onClick={startTimer}>Start</button>}
+                    {isRunning && <button onClick={stopTimer}>Stop</button>}
+                    <button onClick={resetTimer}>Reset</button>
+                </div>
             </div>
         </div>
     );

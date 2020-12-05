@@ -48,7 +48,7 @@ export default function WebSpeechAndTimers() {
     }
 
     return (
-        <div className="web_speech_and_timers-app">
+        <div className="web_speech_and_timers-application">
             <div className="app-container">
                 <h2>Talk the Talk</h2>
 

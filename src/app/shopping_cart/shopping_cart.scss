@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap");
 
-.shopping_cart-app {
+.shopping_cart-application {
     font-family: "MuseoModerno", cursive;
     padding-top: 80px;
     color: #333;
@@ -34,6 +34,8 @@
         font-size: 16px;
         color: #fff;
         text-transform: uppercase;
+        max-width: 1200px;
+        margin: 0 auto;
         .container {
             width: 1280px;
             margin: 0 auto;

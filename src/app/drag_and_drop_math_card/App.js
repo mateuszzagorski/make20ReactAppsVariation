@@ -18,7 +18,7 @@ export default function DragAndDropMathCard() {
     return (
         <DndProvider backend={HTML5Backend}>
             <div className="drag_and_drop_math_card-app-container">
-                <div className="drag_and_drop_math_card-app">
+                <div className="drag_and_drop_math_card-application">
                     {/* math card */}
                     <div className="math-card">
                         <Spot
@@ -40,7 +40,11 @@ export default function DragAndDropMathCard() {
                             handleDrop={handleDrop}
                         />
                         <div className="total">
-                            {eval(`${number1}${operator}${number2}`)}
+                            {eval(`${number1}${operator}${number2}`) % 1 === 0
+                                ? eval(`${number1}${operator}${number2}`)
+                                : eval(
+                                      `${number1}${operator}${number2}`
+                                  ).toFixed(2)}
                         </div>
                     </div>
 

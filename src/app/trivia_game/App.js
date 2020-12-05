@@ -29,7 +29,7 @@ export default function TriviaGame() {
     }
 
     return (
-        <div className="trivia_game-app">
+        <div className="trivia_game-application">
             {/* show the result modal ----------------------- */}
             {isCorrect !== null && (
                 <ResultModal
